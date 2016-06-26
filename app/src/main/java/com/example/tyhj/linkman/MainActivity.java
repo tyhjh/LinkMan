@@ -908,18 +908,25 @@ public class MainActivity extends Activity {
                    public void done(final List<AVObject> list1, AVException e) {
                        if (e == null && list1.size() > 0) {
                            if (list1.get(0).getAVFile("headImage") == null) {
-                               final AVFile avFile = new AVFile(username + strname, bs);
-                               avFile.saveInBackground(new SaveCallback() {
-                                   @Override
-                                   public void done(AVException e) {
-                                       if (e != null) {
-                                           Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                                       } else {
-                                           list1.get(0).put("headImage", avFile);
-                                           list1.get(0).saveInBackground();
+                               savaPhoto(list1, strname, bs);
+                           }else{
+                               if(wifi) {
+                                   list1.get(0).getAVFile("headImage").deleteInBackground();
+
+                                   AVQuery<AVObject> query1= new AVQuery<AVObject>("_File");
+                                   query1.whereEqualTo("name",username+strname);
+                                   query1.findInBackground(new FindCallback<AVObject>() {
+                                       @Override
+                                       public void done(List<AVObject> list, AVException e) {
+                                           if (e==null) {
+                                               for (int i = 0; i < list.size(); i++) {
+                                                   list.get(i).deleteInBackground();
+                                               }
+                                               savaPhoto(list1, strname, bs);
+                                           }
                                        }
-                                   }
-                               });
+                                   });
+                               }
                            }
                        }
                    }
@@ -927,6 +934,22 @@ public class MainActivity extends Activity {
            }
        }
     }
+
+    private void savaPhoto(final List<AVObject> list1, String strname, byte[] bs) {
+        final AVFile avFile = new AVFile(username + strname, bs);
+        avFile.saveInBackground(new SaveCallback() {
+            @Override
+            public void done(AVException e) {
+                if (e != null) {
+                    Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                } else {
+                    list1.get(0).put("headImage", avFile);
+                    list1.get(0).saveInBackground();
+                }
+            }
+        });
+    }
+
     //发送短信
     public void sendSMS(String phoneNumber, String message) {
         // 获取短信管理器
