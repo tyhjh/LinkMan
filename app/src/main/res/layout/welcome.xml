@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="#10000000"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:id="@+id/iv_welcome_bg"
+        android:layout_height="match_parent">
+    </ImageView>
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="#10000000"
+        android:elevation="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+        <LinearLayout
+            android:paddingRight="2dp"
+            android:orientation="vertical"
+            android:gravity="right"
+            android:layout_gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:paddingRight="1dp"
+                android:textColor="#eeeeee"
+                android:textSize="20sp"
+                android:id="@+id/tv_date"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp" />
+            <TextView
+                android:textColor="#eeeeee"
+                android:textSize="20sp"
+                android:id="@+id/tv_week"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp" />
+            <TextView
+                android:textColor="#ffffff"
+                android:textSize="60sp"
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="#eeeeee"
+                android:textSize="17sp"
+                android:id="@+id/tv_word"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="2"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp" />
+        <TextView
+            android:id="@+id/tv_tyhj"
+            android:padding="8dp"
+            android:textSize="12sp"
+            android:layout_gravity="end"
+            android:textColor="#50ffffff"
+            android:text="powered by @Leancloud &amp; Tyhj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

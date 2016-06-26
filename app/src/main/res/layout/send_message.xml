@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tvsendto"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:text="发送信息"
+        android:textColor="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:hint="在此输入信息内容..."
+        android:gravity="left|top"
+        android:padding="10dp"
+        android:textSize="17sp"
+        android:background="#eeeeee"
+        android:id="@+id/et_message"
+        android:layout_width="match_parent"
+        android:layout_height="110dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:textSize="18sp"
+            android:text="取消"
+            android:id="@+id/bt_cancel"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:background="@drawable/bt_press"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <Button
+            android:textSize="18sp"
+            android:text="发送"
+            android:id="@+id/bt_send"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:background="@drawable/bt_press"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
