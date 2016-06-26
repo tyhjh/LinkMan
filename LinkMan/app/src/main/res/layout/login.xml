@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/login_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_weight="5.4"
+        android:background="#00000000"
+        android:gravity="top"
+        android:padding="15dp"
+        android:textSize="20sp"
+        android:textColor="#aaaaaa"
+        android:text="iCloud   Login"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_weight="19"
+        android:layout_height="0dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="#00000000"
+        android:layout_width="match_parent"
+        android:layout_weight="2.8"
+        android:layout_height="0dp" >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3.4"
+            android:layout_height="match_parent" />
+        <EditText
+            android:id="@+id/et_number"
+            android:hint="USERNAME"
+            android:inputType="number"
+            android:gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_weight="14"
+            android:background="#00000000"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="5.2"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <TextView
+        android:layout_weight="1.8"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+    <LinearLayout
+        android:background="#00000000"
+        android:layout_weight="2.9"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="3.4"
+            android:layout_height="match_parent" />
+        <EditText
+            android:id="@+id/et_password"
+            android:hint="PASSWORD"
+            android:inputType="textPassword"
+            android:gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_weight="14"
+            android:background="#00000000"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/bt_go"
+            android:background="@drawable/go"
+            android:layout_width="0dp"
+            android:layout_weight="3.2"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <TextView
+        android:layout_weight="1.2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_weight="1.3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.6"
+            android:layout_height="match_parent" />
+    <Button
+        android:id="@+id/bt_register"
+        android:background="@drawable/go"
+        android:layout_width="0dp"
+        android:layout_weight="0.7"
+        android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <TextView
+        android:layout_weight="5.7"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+    </LinearLayout>
+</RelativeLayout>

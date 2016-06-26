@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:background="#2f3f9e"
+            android:elevation="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:paddingLeft="18dp"
+                android:gravity="center_vertical"
+                android:textColor="#ffffff"
+                android:text="联系人"
+                android:textSize="19sp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp" />
+            <ImageButton
+                android:id="@+id/im_find"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/ib_press"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+     <!--   <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">-->
+            <ListView
+                android:divider="@null"
+                android:id="@+id/lv_man"
+                android:elevation="-3dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </ListView>
+      <!--  </android.support.v4.widget.SwipeRefreshLayout>-->
+    </LinearLayout>
+
+    <RelativeLayout
+        android:elevation="6dp"
+        android:gravity="bottom|end"
+        android:id="@+id/rl_black"
+        android:background="#b0000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/ll_show"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="150dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/ll_add"
+                android:visibility="invisible"
+                android:layout_marginBottom="17dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="right"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tx_add"
+                android:text="新建联系人"
+                android:textSize="16sp"
+                android:textColor="#ffffff"
+                android:paddingRight="15dp"
+                android:gravity="center_vertical|right"
+                android:background="#00000000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageButton
+                android:background="#00000000"
+                android:id="@+id/ib_addman"
+                android:layout_marginRight="25dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_uploading"
+                android:visibility="invisible"
+                android:layout_gravity="right"
+                android:layout_marginBottom="17dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tx_uploading"
+                    android:text="上传至云端"
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"
+                    android:paddingRight="15dp"
+                    android:gravity="center_vertical|right"
+                    android:background="#00000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageButton
+                    android:background="#00000000"
+                    android:id="@+id/ib_uploading"
+                    android:layout_marginRight="25dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_download"
+                android:visibility="invisible"
+                android:layout_gravity="right"
+                android:layout_marginBottom="17dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tx_download"
+                    android:text="同步到本地"
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"
+                    android:paddingRight="15dp"
+                    android:gravity="center_vertical|right"
+                    android:background="#00000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageButton
+                    android:background="#00000000"
+                    android:id="@+id/ib_download"
+                    android:layout_marginRight="25dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_gone"
+                android:visibility="invisible"
+                android:layout_gravity="right"
+                android:layout_marginBottom="17dp"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tx_gone"
+                    android:text="退出此账号"
+                    android:textSize="16sp"
+                    android:textColor="#ffffff"
+                    android:paddingRight="15dp"
+                    android:gravity="center_vertical"
+                    android:background="#00000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageButton
+                    android:background="#00000000"
+                    android:id="@+id/ib_gone"
+                    android:layout_marginRight="25dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    //查找
+    <RelativeLayout
+        android:id="@+id/rl_find_list"
+        android:background="#ffffff"
+        android:visibility="gone"
+        android:elevation="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <EditText
+                    android:hint="搜索"
+                    android:textColor="#444444"
+                    android:id="@+id/et_find"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
+                <Button
+                    android:layout_margin="4dp"
+                    android:id="@+id/bt_find_canle"
+                    android:text="取消"
+                    android:elevation="15dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="55dp"
+                    android:layout_height="37dp" />
+            </LinearLayout>
+            <ListView
+                android:divider="@null"
+                android:background="#ffffff"
+                android:layout_weight="1"
+                android:id="@+id/find_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+            </ListView>
+        </LinearLayout>
+    </RelativeLayout>
+<RelativeLayout
+    android:layout_gravity="bottom|end"
+    android:layout_width="wrap_content"
+    android:elevation="6dp"
+    android:layout_height="wrap_content">
+    <android.support.design.widget.FloatingActionButton android:id="@+id/fab"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/ic_dialog_email" />
+</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

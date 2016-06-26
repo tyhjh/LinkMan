@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="200dp">
+    <Button
+        android:id="@+id/bt_send_message"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="20dp"
+        android:background="@drawable/bt_press"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="17sp"
+        android:text="发送短信"
+        />
+    <Button
+        android:paddingLeft="20dp"
+        android:id="@+id/bt_detail"
+        android:gravity="left|center_vertical"
+        android:layout_width="match_parent"
+        android:background="@drawable/bt_press"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textSize="17sp"
+        android:text="查看详情"
+        />
+    <Button
+        android:paddingLeft="20dp"
+        android:id="@+id/bt_delete"
+        android:gravity="left|center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="删除"
+        android:textSize="17sp"
+        android:background="@drawable/bt_press"
+        />
+</LinearLayout>
