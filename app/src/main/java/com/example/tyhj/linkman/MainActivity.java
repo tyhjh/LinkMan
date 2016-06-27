@@ -103,6 +103,7 @@ public class MainActivity extends Activity {
         }
     };
     String date;
+    int firstIn=0;
     boolean focus1,focus2;
     LinearLayout ll_show;
     boolean rotatepiont=true;
@@ -152,7 +153,8 @@ public class MainActivity extends Activity {
         select_Message();
         if(wifi) {
             upload();
-            upload_headImage();
+        }else {
+            firstIn=1;
         }
         lv_man.addHeaderView(headerView);
         nameAdpter2=new NameAdpter(MainActivity.this,R.layout.name,list);
@@ -181,7 +183,6 @@ public class MainActivity extends Activity {
             }
             cover(i, number, post);
         }
-        upload_headImage();
     }
     //是否重复
     private void cover(final int i, final String[] number, final AVObject post) {
@@ -563,7 +564,6 @@ public class MainActivity extends Activity {
                 if(internet()){
                     Toast.makeText(getApplicationContext(), "正在上传联系人到云端", Toast.LENGTH_SHORT).show();
                     upload();
-                    Toast.makeText(getApplicationContext(), "上传完成", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(getApplicationContext(), "上传失败，请检查网络", Toast.LENGTH_SHORT).show();
                 }
@@ -931,6 +931,11 @@ public class MainActivity extends Activity {
                        }
                    }
                });
+           }
+           if(i==(list.size()-1)&&firstIn!=0){
+               Toast.makeText(getApplicationContext(), "上传完成", Toast.LENGTH_SHORT).show();
+           }else if(firstIn==0&&i==(list.size()-1)) {
+               firstIn=1;
            }
        }
     }
